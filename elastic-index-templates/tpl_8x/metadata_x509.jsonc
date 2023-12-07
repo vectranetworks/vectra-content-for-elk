@@ -5,7 +5,6 @@
   "index_patterns": [
     "metadata_x509*"
   ],
-  "data_stream": { },
   "_meta": {
     "description": "Template for X509 metadata produced by Vectra Stream"
   },
