@@ -5,7 +5,6 @@
   "index_patterns": [
     "metadata_dhcp*"
   ],
-  "data_stream": { },
   "_meta": {
     "description": "Template for DHCP metadata produced by Vectra Stream"
   },

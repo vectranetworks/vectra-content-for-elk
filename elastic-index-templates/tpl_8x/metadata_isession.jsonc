@@ -5,7 +5,6 @@
   "index_patterns": [
     "metadata_isession*"
   ],
-  "data_stream": { },
   "_meta": {
     "description": "Template for iSession metadata produced by Vectra Stream"
   },

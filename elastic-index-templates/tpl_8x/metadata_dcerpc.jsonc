@@ -5,7 +5,6 @@
   "index_patterns": [
     "metadata_dcerpc*"
   ],
-  "data_stream": { },
   "_meta": {
     "description": "Template for DCERPC metadata produced by Vectra Stream"
   },

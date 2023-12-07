@@ -5,7 +5,6 @@
   "index_patterns": [
     "metadata_httpsessioninfo*"
   ],
-  "data_stream": { },
   "_meta": {
     "description": "Template for HTTP metadata produced by Vectra Stream"
   },

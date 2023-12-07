@@ -5,7 +5,6 @@
   "index_patterns": [
     "metadata_beacon*"
   ],
-  "data_stream": { },
   "_meta": {
     "description": "Template for beaconing metadata produced by Vectra Stream"
   },
