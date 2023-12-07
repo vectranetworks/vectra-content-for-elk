@@ -1,0 +1,14 @@
+{
+  "template": {
+    "mappings": {
+        "properties": {
+          "local_orig": {
+            "type": "boolean"
+          },
+          "local_resp": {
+            "type": "boolean"
+          }
+        }
+    }
+  }
+}

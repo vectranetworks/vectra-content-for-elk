@@ -1,0 +1,152 @@
+{
+  "order": 1,
+  "version": 1,
+  "index_patterns": [
+    "metadata_httpsessioninfo*"
+  ],
+  "mappings": {
+    "default": {
+      "properties": {
+        "uid": {
+          "type": "keyword"
+        },
+        "id": {
+          "properties": {
+            "orig_h": {
+              "type": "ip"
+            },
+            "orig_p": {
+              "type": "integer"
+            },
+            "resp_h": {
+              "type": "ip"
+            },
+            "resp_p": {
+              "type": "integer"
+            },
+            "ip_ver": {
+              "type": "keyword"
+            }
+          }
+        },
+        "method": {
+          "type": "keyword"
+        },
+        "host": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "host_multihomed": {
+          "type": "boolean"
+        },
+        "uri": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "referrer": {
+          "type": "keyword"
+        },
+        "user_agent": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "request_body_len": {
+          "type": "long"
+        },
+        "response_body_len": {
+          "type": "long"
+        },
+        "status_code": {
+          "type": "short"
+        },
+        "status_msg": {
+          "type": "keyword"
+        },
+        "resp_filename": {
+          "type": "keyword"
+        },
+        "proxied": {
+          "type": "keyword"
+        },
+        "orig_mime_types": {
+          "type": "keyword"
+        },
+        "resp_mime_types": {
+          "type": "keyword"
+        },
+        "cookie": {
+          "type": "keyword"
+        },
+        "response_content_disposition": {
+          "type": "keyword"
+        },
+        "request_header_count": {
+          "type": "long"
+        },
+        "response_header_count": {
+          "type": "long"
+        },
+        "cookie_vars": {
+          "type": "keyword"
+        },
+        "orig_ip_bytes": {
+          "type": "long"
+        },
+        "resp_ip_bytes": {
+          "type": "long"
+        },
+        "orig_pkts": {
+          "type": "long"
+        },
+        "resp_pkts": {
+          "type": "long"
+        },
+        "request_cache_control": {
+          "type": "keyword"
+        },
+        "response_cache_control": {
+          "type": "keyword"
+        },
+        "response_expires": {
+          "type": "keyword"
+        },
+        "orig_hostname": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "resp_hostname": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "orig_huid": {
+          "type": "keyword"
+        },
+        "resp_huid": {
+          "type": "keyword"
+        },
+        "local_orig": {
+          "type": "boolean"
+        },
+        "local_resp": {
+          "type": "boolean"
+        },
+        "is_proxied": {
+          "type": "boolean"
+        },
+        "ts": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "orig_sluid": {
+          "type": "keyword"
+        },
+        "resp_sluid": {
+          "type": "keyword"
+        },
+        "sensor_uid": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "order": 1,
+  "version": 1,
+  "index_patterns": [
+    "metadata_ssl*"
+  ],
+  "mappings": {
+    "default": {
+      "properties": {
+        "uid": {
+          "type": "keyword"
+        },
+        "id": {
+          "properties": {
+            "orig_h": {
+              "type": "ip"
+            },
+            "orig_p": {
+              "type": "integer"
+            },
+            "resp_h": {
+              "type": "ip"
+            },
+            "resp_p": {
+              "type": "integer"
+            },
+            "ip_ver": {
+              "type": "keyword"
+            }
+          }
+        },
+        "local_orig": {
+          "type": "boolean"
+        },
+        "local_resp": {
+          "type": "boolean"
+        },
+        "orig_hostname": {
+          "type": "keyword"
+        },
+        "resp_hostname": {
+          "type": "keyword"
+        },
+        "orig_huid": {
+          "type": "keyword"
+        },
+        "resp_huid": {
+          "type": "keyword"
+        },
+        "server_name": {
+          "type": "keyword"
+        },
+        "next_protocol": {
+          "type": "keyword"
+        },
+        "established": {
+          "type": "boolean"
+        },
+        "cipher": {
+          "type": "keyword"
+        },
+        "curve": {
+          "type": "keyword"
+        },
+        "version_num": {
+          "type": "integer"
+        },
+        "version": {
+          "type": "keyword"
+        },
+        "issuer": {
+          "type": "keyword"
+        },
+        "subject": {
+          "type": "keyword"
+        },
+        "client_issuer": {
+          "type": "keyword"
+        },
+        "client_subject": {
+          "type": "keyword"
+        },
+        "client_curve_num": {
+          "type": "integer"
+        },
+        "client_ec_point_format": {
+          "type": "short"
+        },
+        "client_extension": {
+          "type": "integer"
+        },
+        "client_version": {
+          "type": "keyword"
+        },
+        "client_version_num": {
+          "type": "integer"
+        },
+        "ja3": {
+          "type": "keyword"
+        },
+        "server_extensions": {
+          "type": "keyword"
+        },
+        "ja3s": {
+          "type": "keyword"
+        },
+        "ts": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "orig_sluid": {
+          "type": "keyword"
+        },
+        "resp_sluid": {
+          "type": "keyword"
+        },
+        "sensor_uid": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}

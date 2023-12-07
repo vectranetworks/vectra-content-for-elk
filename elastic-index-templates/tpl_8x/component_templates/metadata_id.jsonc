@@ -1,0 +1,27 @@
+{
+  "template": {
+    "mappings": {
+        "properties": {
+            "id": {
+              "properties": {
+                "orig_h": {
+                  "type": "ip"
+                },
+                "orig_p": {
+                  "type": "integer"
+                },
+                "resp_h": {
+                  "type": "ip"
+                },
+                "resp_p": {
+                  "type": "integer"
+                },
+                "ip_ver": {
+                  "type": "keyword"
+                }
+              }
+            }
+        }
+    }
+  }
+}

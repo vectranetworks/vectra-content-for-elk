@@ -1,0 +1,137 @@
+{
+  "order": 1,
+  "version": 1,
+  "index_patterns": [
+    "metadata_isession*"
+  ],
+  "settings": {
+    "index": {
+      "number_of_shards": "15"
+    }
+  },
+  "mappings": {
+      "properties": {
+        "uid": {
+          "type": "keyword"
+        },
+        "id": {
+          "properties": {
+            "orig_h": {
+              "type": "ip"
+            },
+            "orig_p": {
+              "type": "integer"
+            },
+            "resp_h": {
+              "type": "ip"
+            },
+            "resp_p": {
+              "type": "integer"
+            },
+            "ip_ver": {
+              "type": "keyword"
+            }
+          }
+        },
+        "proto": {
+          "type": "short"
+        },
+        "protoName": {
+          "type": "keyword"
+        },
+        "service": {
+          "type": "keyword"
+        },
+        "duration": {
+          "type": "long"
+        },
+        "conn_state": {
+          "type": "keyword"
+        },
+        "local_orig": {
+          "type": "boolean"
+        },
+        "local_resp": {
+          "type": "boolean"
+        },
+        "orig_pkts": {
+          "type": "long"
+        },
+        "orig_ip_bytes": {
+          "type": "long"
+        },
+        "resp_pkts": {
+          "type": "long"
+        },
+        "resp_ip_bytes": {
+          "type": "long"
+        },
+        "resp_domain": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "resp_multihomed": {
+          "type": "boolean"
+        },
+        "orig_vlan_id": {
+          "type": "integer"
+        },
+        "resp_vlan_id": {
+          "type": "integer"
+        },
+        "first_orig_resp_pkt_time": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "first_resp_orig_pkt_time": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "first_orig_resp_data_pkt_time": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "first_resp_orig_data_pkt_time": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "session_start_time": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "first_orig_resp_data_pkt": {
+          "type": "keyword"
+        },
+        "first_resp_orig_data_pkt": {
+          "type": "keyword"
+        },
+        "orig_hostname": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "resp_hostname": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "resp_huid": {
+          "type": "keyword"
+        },
+        "orig_huid": {
+          "type": "keyword"
+        },
+        "ts": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "orig_sluid": {
+          "type": "keyword"
+        },
+        "resp_sluid": {
+          "type": "keyword"
+        },
+        "sensor_uid": {
+          "type": "keyword"
+        }
+      }
+    }
+}

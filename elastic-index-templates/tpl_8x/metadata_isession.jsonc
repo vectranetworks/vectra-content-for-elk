@@ -1,0 +1,89 @@
+{
+  "priority": 300,
+  "version": 1,
+  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local","metadata_default_lifecyle_policy"],
+  "index_patterns": [
+    "metadata_isession*"
+  ],
+  "data_stream": { },
+  "_meta": {
+    "description": "Template for iSession metadata produced by Vectra Stream"
+  },
+  "template":{
+    "settings": {
+      "index": {
+        "number_of_shards": "16"
+      }
+    },
+    "mappings": {
+      "properties": {
+        "proto": {
+          "type": "short"
+        },
+        "protoName": {
+          "type": "keyword"
+        },
+        "service": {
+          "type": "keyword"
+        },
+        "duration": {
+          "type": "long"
+        },
+        "conn_state": {
+          "type": "keyword"
+        },
+        "orig_pkts": {
+          "type": "long"
+        },
+        "orig_ip_bytes": {
+          "type": "long"
+        },
+        "resp_pkts": {
+          "type": "long"
+        },
+        "resp_ip_bytes": {
+          "type": "long"
+        },
+        "resp_domain": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "resp_multihomed": {
+          "type": "boolean"
+        },
+        "orig_vlan_id": {
+          "type": "integer"
+        },
+        "resp_vlan_id": {
+          "type": "integer"
+        },
+        "first_orig_resp_pkt_time": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "first_resp_orig_pkt_time": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "first_orig_resp_data_pkt_time": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "first_resp_orig_data_pkt_time": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "session_start_time": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "first_orig_resp_data_pkt": {
+          "type": "keyword"
+        },
+        "first_resp_orig_data_pkt": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}

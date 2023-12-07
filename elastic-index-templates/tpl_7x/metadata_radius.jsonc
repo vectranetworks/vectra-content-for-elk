@@ -1,0 +1,184 @@
+{
+    "order" : 1,
+    "version" : 1,
+    "index_patterns" : [
+      "metadata_radius*"
+    ],
+    "settings" : { },
+    "mappings" : {
+      "default" : {
+        "properties" : {
+          "account_input_octets" : {
+            "type" : "long"
+          },
+          "account_input_packets" : {
+            "type" : "long"
+          },
+          "delegated_ipv6_prefix" : {
+            "type" : "keyword"
+          },
+          "reply_msg" : {
+            "type" : "keyword"
+          },
+          "src_display_name" : {
+            "type" : "keyword"
+          },
+          "nas_identifier" : {
+            "type" : "keyword"
+          },
+          "framed_address" : {
+            "type" : "keyword"
+          },
+          "nas_ip_address" : {
+            "type" : "keyword"
+          },
+          "password" : {
+            "type" : "keyword"
+          },
+          "framed_protocol" : {
+            "type" : "long"
+          },
+          "logged" : {
+            "type" : "boolean"
+          },
+          "src_luid_external" : {
+            "type" : "boolean"
+          },
+          "id" : {
+            "properties" : {
+              "orig_p" : {
+                "type" : "integer"
+              },
+              "resp_h" : {
+                "type" : "ip"
+              },
+              "orig_h" : {
+                "type" : "ip"
+              },
+              "resp_p" : {
+                "type" : "integer"
+              },
+              "ip_ver" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          "idle_timeout" : {
+            "type" : "long"
+          },
+          "reply_timestamp" : {
+            "format" : "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis",
+            "type" : "date"
+          },
+          "dst_luid_external" : {
+            "type" : "boolean"
+          },
+          "account_session_id" : {
+            "type" : "keyword"
+          },
+          "filter_id" : {
+            "type" : "keyword"
+          },
+          "dst_host_luid" : {
+            "type" : "keyword"
+          },
+          "account_delay_time" : {
+            "type" : "long"
+          },
+          "account_output_octets" : {
+            "type" : "long"
+          },
+          "session_timeout" : {
+            "type" : "long"
+          },
+          "account_authentic" : {
+            "type" : "long"
+          },
+          "dst_display_name" : {
+            "type" : "keyword"
+          },
+          "event_timestamp" : {
+            "format" : "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis",
+            "type" : "date"
+          },
+          "framed_ipv6_prefix" : {
+            "type" : "keyword"
+          },
+          "mac" : {
+            "type" : "keyword"
+          },
+          "nas_port_type" : {
+            "type" : "long"
+          },
+          "result" : {
+            "type" : "keyword"
+          },
+          "uid" : {
+            "type" : "keyword"
+          },
+          "src_luid" : {
+            "type" : "keyword"
+          },
+          "framed_interface" : {
+            "type" : "long"
+          },
+          "account_output_gigawords" : {
+            "type" : "long"
+          },
+          "account_session_time" : {
+            "type" : "long"
+          },
+          "accounting_session_id" : {
+            "type" : "keyword"
+          },
+          "account_input_gigawords" : {
+            "type" : "long"
+          },
+          "dst_luid" : {
+            "type" : "keyword"
+          },
+          "framed_ip_address" : {
+            "type" : "keyword"
+          },
+          "src_host_luid" : {
+            "type" : "keyword"
+          },
+          "tunnel_client" : {
+            "type" : "keyword"
+          },
+          "account_output_packets" : {
+            "type" : "long"
+          },
+          "nas_port" : {
+            "type" : "long"
+          },
+          "ttl" : {
+            "format" : "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis",
+            "type" : "date"
+          },
+          "radius_type" : {
+            "type" : "keyword"
+          },
+          "service_type" : {
+            "type" : "long"
+          },
+          "connect_info" : {
+            "type" : "keyword"
+          },
+          "password_seen" : {
+            "type" : "boolean"
+          },
+          "nas_port_id" : {
+            "type" : "keyword"
+          },
+          "calling_station_id" : {
+            "type" : "keyword"
+          },
+          "username" : {
+            "type" : "keyword"
+          }
+        }
+      }
+    },
+    "aliases" : { }
+}

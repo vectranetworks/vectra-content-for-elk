@@ -1,0 +1,22 @@
+{
+  "template": {
+    "mappings": {
+        "properties": {
+          "orig_hostname": {
+            "type": "keyword",
+            "eager_global_ordinals": true
+          },
+          "resp_hostname": {
+            "type": "keyword",
+            "eager_global_ordinals": true
+          },
+          "orig_huid": {
+            "type": "keyword"
+          },
+          "resp_huid": {
+            "type": "keyword"
+          }
+        }
+    }
+  }
+}

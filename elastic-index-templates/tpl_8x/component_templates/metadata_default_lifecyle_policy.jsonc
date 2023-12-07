@@ -1,0 +1,10 @@
+{
+    "template": {
+      "settings": {
+        "index.lifecycle.name": "vectra-metadata-policy"
+      }
+    },
+    "_meta": {
+      "description": "Default sttings for ILM"
+    }
+  }

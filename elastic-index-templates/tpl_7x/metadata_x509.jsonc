@@ -1,0 +1,143 @@
+{
+  "order": 1,
+  "version": 1,
+  "index_patterns": [
+    "metadata_x509*"
+  ],
+  "mappings": {
+    "default": {
+      "properties": {
+        "uid": {
+          "type": "keyword"
+        },
+        "id": {
+          "properties": {
+            "orig_h": {
+              "type": "ip"
+            },
+            "orig_p": {
+              "type": "integer"
+            },
+            "resp_h": {
+              "type": "ip"
+            },
+            "resp_p": {
+              "type": "integer"
+            },
+            "ip_ver": {
+              "type": "keyword"
+            }
+          }
+        },
+        "local_orig": {
+          "type": "boolean"
+        },
+        "local_resp": {
+          "type": "boolean"
+        },
+        "orig_hostname": {
+          "type": "keyword"
+        },
+        "resp_hostname": {
+          "type": "keyword"
+        },
+        "orig_huid": {
+          "type": "keyword"
+        },
+        "resp_huid": {
+          "type": "keyword"
+        },
+        "certificate": {
+          "properties": {
+            "self_issued": {
+              "type": "boolean"
+            },
+            "version": {
+              "type": "integer"
+            },
+            "serial": {
+              "type": "keyword"
+            },
+            "subject": {
+              "type": "keyword"
+            },
+            "issuer": {
+              "type": "keyword"
+            },
+            "cn": {
+              "type": "keyword"
+            },
+            "not_valid_before": {
+              "type": "date",
+              "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+            },
+            "not_valid_after": {
+              "type": "date",
+              "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+            },
+            "key_alg": {
+              "type": "keyword"
+            },
+            "sig_alg": {
+              "type": "keyword"
+            },
+            "key_type": {
+              "type": "keyword"
+            },
+            "key_length": {
+              "type": "keyword"
+            },
+            "exponent": {
+              "type": "keyword"
+            },
+            "curve": {
+              "type": "keyword"
+            }
+          }
+        },
+        "basic_constraints": {
+          "properties": {
+            "ca": {
+              "type": "boolean"
+            },
+            "path_len": {
+              "type": "keyword"
+            }
+          }
+        },
+        "san": {
+          "properties": {
+            "dns": {
+              "type": "keyword"
+            },
+            "email": {
+              "type": "keyword"
+            },
+            "ip": {
+              "type": "ip"
+            },
+            "uri": {
+              "type": "keyword"
+            },
+            "other_fields": {
+              "type": "boolean"
+            }
+          }
+        },
+        "ts": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "orig_sluid": {
+          "type": "keyword"
+        },
+        "resp_sluid": {
+          "type": "keyword"
+        },
+        "sensor_uid": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}

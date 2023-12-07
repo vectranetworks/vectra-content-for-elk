@@ -1,0 +1,94 @@
+{
+  "order": 1,
+  "version": 1,
+  "index_patterns": [
+    "metadata_smbfiles*"
+  ],
+  "mappings": {
+      "properties": {
+        "uid": {
+          "type": "keyword"
+        },
+        "id": {
+          "properties": {
+            "orig_h": {
+              "type": "ip"
+            },
+            "orig_p": {
+              "type": "integer"
+            },
+            "resp_h": {
+              "type": "ip"
+            },
+            "resp_p": {
+              "type": "integer"
+            },
+            "ip_ver": {
+              "type": "keyword"
+            }
+          }
+        },
+        "local_orig": {
+          "type": "boolean"
+        },
+        "local_resp": {
+          "type": "boolean"
+        },
+        "orig_hostname": {
+          "type": "keyword"
+        },
+        "resp_hostname": {
+          "type": "keyword"
+        },
+        "orig_huid": {
+          "type": "keyword"
+        },
+        "resp_huid": {
+          "type": "keyword"
+        },
+        "action": {
+          "type": "keyword"
+        },
+        "path": {
+          "type": "keyword"
+        },
+        "name": {
+          "type": "keyword"
+        },
+        "server_name": {
+          "type": "keyword"
+        },
+        "prev_name": {
+          "type": "keyword"
+        },
+        "username": {
+          "type": "keyword"
+        },
+        "domain": {
+          "type": "keyword"
+        },
+        "hostname": {
+          "type": "keyword"
+        },
+        "version": {
+          "type": "keyword"
+        },
+        "delete_on_close": {
+          "type": "boolean"
+        },
+        "ts": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "orig_sluid": {
+          "type": "keyword"
+        },
+        "resp_sluid": {
+          "type": "keyword"
+        },
+        "sensor_uid": {
+          "type": "keyword"
+        }
+      }
+    }
+}

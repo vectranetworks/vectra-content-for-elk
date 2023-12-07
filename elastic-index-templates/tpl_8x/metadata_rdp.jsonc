@@ -1,0 +1,49 @@
+{
+  "priority": 300,
+  "version": 1,
+  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local","metadata_default_lifecyle_policy"],
+  "index_patterns": [
+    "metadata_rdp*"
+  ],
+  "_meta": {
+    "description": "Template for RDP metadata produced by Vectra Stream"
+  },
+  "template":{
+    "settings": {
+      "index": {
+        "number_of_shards": "1"
+      }
+    },
+    "mappings": {
+      "properties": {
+        "cookie": {
+          "type": "keyword"
+        },
+        "keyboard_layout": {
+          "type": "keyword"
+        },
+        "client_build": {
+          "type": "keyword"
+        },
+        "client_name": {
+          "type": "keyword"
+        },
+        "client_dig_protocol_id": {
+          "type": "keyword"
+        },
+        "client_dig_product_id": {
+          "type": "keyword"
+        },
+        "desktop_width": {
+          "type": "short"
+        },
+        "desktop_height": {
+          "type": "short"
+        },
+        "result": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}

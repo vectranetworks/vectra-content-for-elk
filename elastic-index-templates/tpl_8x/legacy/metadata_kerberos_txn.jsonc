@@ -1,0 +1,101 @@
+{
+  "order": 1,
+  "version": 1,
+  "index_patterns": [
+    "metadata_kerberos_txn*"
+  ],
+  "mappings": {
+      "properties": {
+        "uid": {
+          "type": "keyword"
+        },
+        "id": {
+          "properties": {
+            "orig_h": {
+              "type": "ip"
+            },
+            "orig_p": {
+              "type": "integer"
+            },
+            "resp_h": {
+              "type": "ip"
+            },
+            "resp_p": {
+              "type": "integer"
+            },
+            "ip_ver": {
+              "type": "keyword"
+            }
+          }
+        },
+        "orig_hostname": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "resp_hostname": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "orig_huid": {
+          "type": "keyword"
+        },
+        "resp_huid": {
+          "type": "keyword"
+        },
+        "request_type": {
+          "type": "keyword"
+        },
+        "client": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "service": {
+          "type": "keyword"
+        },
+        "success": {
+          "type": "boolean"
+        },
+        "error_code": {
+          "type": "keyword"
+        },
+        "error_msg": {
+          "type": "keyword"
+        },
+        "protocol": {
+          "type": "integer"
+        },
+        "reply_timestamp": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "local_orig": {
+          "type": "boolean"
+        },
+        "local_resp": {
+          "type": "boolean"
+        },
+        "orig_host_observed_privilege": {
+          "type": "integer"
+        },
+        "ts": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "orig_sluid": {
+          "type": "keyword"
+        },
+        "resp_sluid": {
+          "type": "keyword"
+        },
+        "sensor_uid": {
+          "type": "keyword"
+        },
+        "req_cipher": {
+          "type": "keyword"
+        },
+        "rep_cipher": {
+          "type": "keyword"
+        }
+      }
+    }
+}

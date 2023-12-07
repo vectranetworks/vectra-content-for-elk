@@ -1,0 +1,91 @@
+{
+  "order": 1,
+  "version": 1,
+  "index_patterns": [
+    "metadata_rdp*"
+  ],
+  "mappings": {
+      "properties": {
+        "uid": {
+          "type": "keyword"
+        },
+        "id": {
+          "properties": {
+            "orig_h": {
+              "type": "ip"
+            },
+            "orig_p": {
+              "type": "integer"
+            },
+            "resp_h": {
+              "type": "ip"
+            },
+            "resp_p": {
+              "type": "integer"
+            },
+            "ip_ver": {
+              "type": "keyword"
+            }
+          }
+        },
+        "cookie": {
+          "type": "keyword"
+        },
+        "keyboard_layout": {
+          "type": "keyword"
+        },
+        "client_build": {
+          "type": "keyword"
+        },
+        "client_name": {
+          "type": "keyword"
+        },
+        "client_dig_protocol_id": {
+          "type": "keyword"
+        },
+        "client_dig_product_id": {
+          "type": "keyword"
+        },
+        "desktop_width": {
+          "type": "short"
+        },
+        "desktop_height": {
+          "type": "short"
+        },
+        "result": {
+          "type": "keyword"
+        },
+        "local_orig": {
+          "type": "boolean"
+        },
+        "local_resp": {
+          "type": "boolean"
+        },
+        "orig_hostname": {
+          "type": "keyword"
+        },
+        "resp_hostname": {
+          "type": "keyword"
+        },
+        "resp_huid": {
+          "type": "keyword"
+        },
+        "orig_huid": {
+          "type": "keyword"
+        },
+        "ts": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "orig_sluid": {
+          "type": "keyword"
+        },
+        "resp_sluid": {
+          "type": "keyword"
+        },
+        "sensor_uid": {
+          "type": "keyword"
+        }
+      }
+    }
+}

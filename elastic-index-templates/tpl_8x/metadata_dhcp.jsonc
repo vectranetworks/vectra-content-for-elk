@@ -1,0 +1,44 @@
+{
+  "priority": 300,
+  "version": 1,
+  "composed_of": ["metadata","metadata_default_lifecyle_policy"],
+  "index_patterns": [
+    "metadata_dhcp*"
+  ],
+  "data_stream": { },
+  "_meta": {
+    "description": "Template for DHCP metadata produced by Vectra Stream"
+  },
+  "template":{
+    "settings": {
+      "index": {
+        "number_of_shards": "2"
+      }
+    },
+    "mappings": {
+      "properties": {
+        "mac": {
+          "type": "keyword"
+        },
+        "assigned_ip": {
+          "type": "ip"
+        },
+        "trans_id": {
+          "type": "long"
+        },
+        "lease_time": {
+          "type": "long"
+        },
+        "dhcp_server_ip": {
+          "type": "ip"
+        },
+        "orig_hostname": {
+          "type": "keyword"
+        },
+        "dns_server_ips": {
+          "type": "ip"
+        }
+      }
+    }
+  }
+}

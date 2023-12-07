@@ -1,0 +1,40 @@
+{
+  "priority": 300,
+  "version": 1,
+  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local","metadata_default_lifecyle_policy"],
+  "index_patterns": [
+    "metadata_smbmapping*"
+  ],
+  "_meta": {
+    "description": "Template for SMB mapping metadata produced by Vectra Stream"
+  },
+  "template":{
+    "settings": {
+      "index": {
+        "number_of_shards": "2"
+      }
+    },
+    "mappings": {
+      "properties": {
+        "path": {
+          "type": "keyword"
+        },
+        "service": {
+          "type": "keyword"
+        },
+        "username": {
+          "type": "keyword"
+        },
+        "domain": {
+          "type": "keyword"
+        },
+        "hostname": {
+          "type": "keyword"
+        },
+        "version": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}

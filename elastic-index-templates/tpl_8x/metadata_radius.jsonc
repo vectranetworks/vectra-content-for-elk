@@ -1,0 +1,169 @@
+{
+  "priority": 300,
+  "version": 1,
+  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local","metadata_default_lifecyle_policy"],
+  "index_patterns": [
+    "metadata_radius*"
+  ],
+  "_meta": {
+    "description": "Template for RADIUS metadata produced by Vectra Stream"
+  },
+  "template":{
+    "settings": {
+      "index": {
+        "number_of_shards": "1"
+      }
+    },
+    "mappings": {
+      "properties": {
+        "account_authentic":{
+          "type": "long"
+        },
+        "account_delay_time": {
+          "type": "long"
+        },
+        "account_input_gigawords": {
+          "type": "long"
+        },
+        "account_input_octets": {
+          "type": "long"
+        },
+        "account_input_packets": {
+          "type": "long"
+        },
+        "account_output_gigawords": {
+          "type": "long"
+        },
+        "account_output_octets": {
+          "type": "long"
+        },
+        "account_output_packets": {
+          "type": "long"
+        },
+        "accounting_session_id": {
+          "type": "keyword"
+        },
+        "account_session_id": {
+          "type": "keyword"
+        },
+        "account_session_time": {
+          "type": "long"
+        },
+        "calling_station_id": {
+          "type": "keyword"
+        },
+        "connect_info": {
+          "type": "keyword"
+        },
+        "delegated_ipv6_prefix": {
+          "type": "keyword"
+        },
+        "dst_display_name": {
+          "type": "keyword"
+        },
+        "dst_host_luid": {
+          "type": "keyword"
+        },
+        "dst_luid": {
+          "type": "keyword"
+        },
+        "dst_luid_external": {
+          "type": "boolean"
+        },
+        "event_timestamp": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "filter_id": {
+          "type": "keyword"
+        },
+        "framed_address": {
+          "type": "keyword"
+        },
+        "framed_interface": {
+          "type": "long"
+        },
+        "framed_ip_address": {
+          "type": "keyword"
+        },
+        "framed_ipv6_prefix": {
+          "type": "keyword"
+        },
+        "framed_protocol": {
+          "type": "long"
+        },
+        "idle_timeout": {
+          "type": "long"
+        },
+        "logged": {
+          "type": "boolean"
+        },
+        "mac": {
+          "type": "keyword"
+        },
+        "nas_identifier": {
+          "type": "keyword"
+         },
+         "nas_ip_address": {
+           "type": "keyword"
+         },
+         "nas_port": {
+           "type": "long"
+         },
+         "nas_port_id": {
+           "type": "keyword"
+         },
+         "nas_port_type": {
+          "type": "long"
+         },
+         "password": {
+          "type": "keyword"
+        },
+        "password_seen": {
+          "type": "boolean"
+        },
+        "radius_type": {
+          "type": "keyword"
+        },
+        "reply_msg": {
+          "type": "keyword"
+        },
+        "reply_timestamp": {
+          "type": "date",
+           "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+         },
+         "result": {
+          "type": "keyword"
+        },
+        "service_type": {
+          "type": "long"
+        },
+        "session_timeout": {
+          "type": "long"
+        },
+        "src_display_name": {
+          "type": "keyword"
+        },
+        "src_host_luid": {
+          "type": "keyword"
+        },
+        "src_luid": {
+          "type": "keyword"
+        },
+        "src_luid_external": {
+          "type": "boolean"
+        },
+        "ttl": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "tunnel_client": {
+          "type": "keyword"
+        },
+        "username": {
+          "type": "keyword"
+        }
+      }
+    }
+ }
+}

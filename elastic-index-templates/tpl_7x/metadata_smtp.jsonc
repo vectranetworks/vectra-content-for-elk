@@ -1,0 +1,128 @@
+{
+  "order": 1,
+  "version": 1,
+  "index_patterns": [
+    "metadata_smtp*"
+  ],
+  "mappings": {
+    "default": {
+    "properties": {
+      "uid": {
+        "type": "keyword"
+      },
+      "id": {
+        "properties": {
+          "orig_h": {
+            "type": "ip"
+          },
+          "orig_p": {
+            "type": "integer"
+          },
+          "resp_h": {
+            "type": "ip"
+          },
+          "resp_p": {
+            "type": "integer"
+          },
+          "ip_ver": {
+            "type": "keyword"
+          }
+        }
+      },
+      "local_orig": {
+        "type": "boolean"
+      },
+      "local_resp": {
+        "type": "boolean"
+      },
+      "orig_hostname": {
+        "type": "keyword"
+      },
+      "resp_hostname": {
+        "type": "keyword"
+      },
+      "orig_huid": {
+        "type": "keyword"
+      },
+      "resp_huid": {
+        "type": "keyword"
+      },
+      "orig_sluid": {
+        "type": "keyword"
+      },
+      "resp_sluid": {
+        "type": "keyword"
+      },
+      "version": {
+        "type": "integer"
+      },
+      "cc": {
+        "type": "keyword"
+      },
+      "date": {
+        "type": "date",
+        "format": "E, d MMM yyyy HH:mm:ss Z || yyyy-MM-dd HH:mm:ss||epoch_millis",
+        "ignore_malformed": true
+      },
+      "from": {
+        "type": "keyword"
+      },
+      "helo": {
+        "type": "keyword"
+      },
+      "in_reply_to": {
+        "type": "keyword"
+      },
+      "mail_from": {
+        "type": "keyword"
+      },
+      "msgid": {
+        "type": "keyword"
+      },
+      "reply_to": {
+        "type": "keyword"
+      },
+      "subject": {
+        "type": "keyword"
+      },
+      "tls": {
+        "type": "boolean"
+      },
+      "to": {
+        "type": "keyword"
+      },
+      "useragent": {
+        "type": "keyword"
+      },
+      "x_originating_ip": {
+        "type": "keyword"
+      },
+      "first_received": {
+        "type": "keyword"
+      },
+      "second_received": {
+        "type": "keyword"
+      },
+      "spf_helo": {
+        "type": "keyword"
+      },
+      "dkim_status": {
+        "type": "keyword"
+      },
+      "dmarc_status": {
+        "type": "keyword"
+      },
+      "spf_mailfrom": {
+        "type": "keyword"
+      },
+      "ts": {
+        "type": "date",
+        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+      },
+		"sensor_uid": {
+        "type": "keyword"
+      }
+    }
+  }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "order": 1,
+  "version": 1,
+  "index_patterns": [
+    "metadata_dhcp*"
+  ],
+  "mappings": {
+      "properties": {
+        "uid": {
+          "type": "keyword"
+        },
+        "mac": {
+          "type": "keyword"
+        },
+        "assigned_ip": {
+          "type": "ip"
+        },
+        "trans_id": {
+          "type": "long"
+        },
+        "lease_time": {
+          "type": "long"
+        },
+        "dhcp_server_ip": {
+          "type": "ip"
+        },
+        "orig_hostname": {
+          "type": "keyword"
+        },
+        "dns_server_ips": {
+          "type": "ip"
+        },
+        "ts": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "orig_sluid": {
+          "type": "keyword"
+        },
+        "resp_sluid": {
+          "type": "keyword"
+        },
+        "sensor_uid": {
+          "type": "keyword"
+        }
+      }
+    }
+}

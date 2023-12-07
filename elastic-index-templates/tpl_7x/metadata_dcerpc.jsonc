@@ -1,0 +1,89 @@
+{
+  "order": 1,
+  "version": 1,
+  "index_patterns": [
+    "metadata_dcerpc*"
+  ],
+  "mappings": {
+    "default": {
+      "properties": {
+        "uid": {
+          "type": "keyword"
+        },
+        "id": {
+          "properties": {
+            "orig_h": {
+              "type": "ip"
+            },
+            "orig_p": {
+              "type": "integer"
+            },
+            "resp_h": {
+              "type": "ip"
+            },
+            "resp_p": {
+              "type": "integer"
+            },
+            "ip_ver": {
+              "type": "keyword"
+            }
+          }
+        },
+        "orig_hostname": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "resp_hostname": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "resp_huid": {
+          "type": "keyword"
+        },
+        "orig_huid": {
+          "type": "keyword"
+        },
+        "rtt": {
+          "type": "long"
+        },
+        "username": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "domain": {
+          "type": "keyword"
+        },
+        "hostname": {
+          "type": "keyword"
+        },
+        "endpoint": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "operation": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "local_orig": {
+          "type": "boolean"
+        },
+        "local_resp": {
+          "type": "boolean"
+        },
+        "ts": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "orig_sluid": {
+          "type": "keyword"
+        },
+        "resp_sluid": {
+          "type": "keyword"
+        },
+        "sensor_uid": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}

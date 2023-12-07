@@ -1,0 +1,79 @@
+{
+  "priority": 300,
+  "version": 1,
+  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local","metadata_default_lifecyle_policy"],
+  "index_patterns": [
+    "metadata_ssl*"
+  ],
+  "_meta": {
+    "description": "Template for SSL metadata produced by Vectra Stream"
+  },
+  "template":{
+    "settings": {
+      "index": {
+        "number_of_shards": "4"
+      }
+    },
+    "mappings": {
+      "properties": {
+        "server_name": {
+          "type": "keyword"
+        },
+        "next_protocol": {
+          "type": "keyword"
+        },
+        "established": {
+          "type": "boolean"
+        },
+        "cipher": {
+          "type": "keyword"
+        },
+        "curve": {
+          "type": "keyword"
+        },
+        "version_num": {
+          "type": "integer"
+        },
+        "version": {
+          "type": "keyword"
+        },
+        "issuer": {
+          "type": "keyword"
+        },
+        "subject": {
+          "type": "keyword"
+        },
+        "client_issuer": {
+          "type": "keyword"
+        },
+        "client_subject": {
+          "type": "keyword"
+        },
+        "client_curve_num": {
+          "type": "integer"
+        },
+        "client_ec_point_format": {
+          "type": "short"
+        },
+        "client_extension": {
+          "type": "integer"
+        },
+        "client_version": {
+          "type": "keyword"
+        },
+        "client_version_num": {
+          "type": "integer"
+        },
+        "ja3": {
+          "type": "keyword"
+        },
+        "server_extensions": {
+          "type": "keyword"
+        },
+        "ja3s": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}

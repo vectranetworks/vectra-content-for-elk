@@ -1,0 +1,102 @@
+{
+  "priority": 300,
+  "version": 1,
+  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local","metadata_default_lifecyle_policy"],
+  "index_patterns": [
+    "metadata_x509*"
+  ],
+  "data_stream": { },
+  "_meta": {
+    "description": "Template for X509 metadata produced by Vectra Stream"
+  },
+  "template":{
+    "settings": {
+      "index": {
+        "number_of_shards": "2",
+        "lifecycle.name": "stream-ilm-policy",
+        "lifecycle.rollover_alias":"metadata_x509"
+      }
+    },
+    "mappings": {
+      "properties": {
+        "certificate": {
+          "properties": {
+            "self_issued": {
+              "type": "boolean"
+            },
+            "version": {
+              "type": "integer"
+            },
+            "serial": {
+              "type": "keyword"
+            },
+            "subject": {
+              "type": "keyword"
+            },
+            "issuer": {
+              "type": "keyword"
+            },
+            "cn": {
+              "type": "keyword"
+            },
+            "not_valid_before": {
+              "type": "date",
+              "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+            },
+            "not_valid_after": {
+              "type": "date",
+              "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+            },
+            "key_alg": {
+              "type": "keyword"
+            },
+            "sig_alg": {
+              "type": "keyword"
+            },
+            "key_type": {
+              "type": "keyword"
+            },
+            "key_length": {
+              "type": "keyword"
+            },
+            "exponent": {
+              "type": "keyword"
+            },
+            "curve": {
+              "type": "keyword"
+            }
+          }
+        },
+        "basic_constraints": {
+          "properties": {
+            "ca": {
+              "type": "boolean"
+            },
+            "path_len": {
+              "type": "keyword"
+            }
+          }
+        },
+        "san": {
+          "properties": {
+            "dns": {
+              "type": "keyword"
+            },
+            "email": {
+              "type": "keyword"
+            },
+            "ip": {
+              "type": "ip"
+            },
+            "uri": {
+              "type": "keyword"
+            },
+            "other_fields": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+  }
+}

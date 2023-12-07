@@ -1,0 +1,70 @@
+{
+  "priority": 300,
+  "version": 1,
+  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local","metadata_default_lifecyle_policy"],
+  "index_patterns": [
+    "metadata_beacon*"
+  ],
+  "data_stream": { },
+  "_meta": {
+    "description": "Template for beaconing metadata produced by Vectra Stream"
+  },
+  "template":{
+    "settings": {
+      "index": {
+        "number_of_shards": "1"
+      }
+    },
+    "mappings": {
+      "properties": {
+        "beacon_uid": {
+          "type": "keyword"
+        },
+        "beacon_type": {
+          "type": "keyword"
+        },
+        "duration": {
+          "type": "long"
+        },
+        "first_event_time": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "ja3": {
+          "type": "keyword"
+        },
+        "last_event_time": {
+          "type": "date",
+          "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        },
+        "orig_hostname": {
+          "type": "keyword"
+        },
+        "orig_huid": {
+          "type": "keyword"
+        },
+        "orig_ip_bytes": {
+          "type": "long"
+        },
+        "proto": {
+          "type": "integer"
+        },
+        "protoName": {
+          "type": "keyword"
+        },
+        "resp_domains": {
+          "type": "keyword"
+        },
+        "resp_ip_bytes": {
+          "type": "long"
+        },
+        "service": {
+          "type": "keyword"
+        },
+        "session_count": {
+          "type": "long"
+        }
+      }
+    }
+  }
+}

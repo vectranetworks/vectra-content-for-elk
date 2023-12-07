@@ -1,0 +1,78 @@
+{
+  "priority": 300,
+  "version": 1,
+  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local","metadata_default_lifecyle_policy"],
+  "index_patterns": [
+    "metadata_smtp*"
+  ],
+  "_meta": {
+    "description": "Template for SMTP metadata produced by Vectra Stream"
+  },
+  "template":{
+    "settings": {
+      "index": {
+        "number_of_shards": "2"
+      }
+    },
+    "mappings": {
+      "properties": {
+        "version": {
+          "type": "integer"
+        },
+        "cc": {
+          "type": "keyword"
+        },
+        "date": {
+          "type": "date",
+          "format": "E, d MMM yyyy HH:mm:ss Z || yyyy-MM-dd HH:mm:ss||epoch_millis",
+          "ignore_malformed": true
+        },
+        "from": {
+          "type": "keyword"
+        },
+        "helo": {
+          "type": "keyword"
+        },
+        "in_reply_to": {
+          "type": "keyword"
+        },
+        "mail_from": {
+          "type": "keyword"
+        },
+        "msgid": {
+          "type": "keyword"
+        },
+        "reply_to": {
+          "type": "keyword"
+        },
+        "subject": {
+          "type": "keyword"
+        },
+        "tls": {
+          "type": "boolean"
+        },
+        "to": {
+          "type": "keyword"
+        },
+        "useragent": {
+          "type": "keyword"
+        },
+        "x_originating_ip": {
+          "type": "keyword"
+        },
+        "first_received": {
+          "type": "keyword"
+        },
+        "second_received": {
+          "type": "keyword"
+        },
+        "spf_helo": {
+          "type": "keyword"
+        },
+        "spf_mailfrom": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}
