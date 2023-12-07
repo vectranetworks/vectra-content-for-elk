@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash
 
 # Check if environment variable exists
 if [ -z "$IP_ELASTIC" ]; then
@@ -93,7 +93,7 @@ elif [ "$version" == "8" ]; then
 
     echo -e "Create Index Lifecyle Policies"
 
-    for ILM_PATH in $(ls elastic-index-templates/tpl_8x/ilm/*jsonc); do
+    for ILM_PATH in $(ls elastic-index-templates/tpl_8x/ilm/*.jsonc); do
         ILM_NAME=$(basename "$ILM_PATH" .jsonc)
         echo -e "$ILM_NAME ($ILM_PATH): "
         cmd=$(curl $CURL_OPTIONS $CURL_CREDS -XPUT "$CURL_SCHEME://$IP_ELASTIC:9200/_ilm/policy/$ILM_NAME" -H "Content-Type: application/json" --data-binary @$ILM_PATH)
@@ -102,12 +102,14 @@ elif [ "$version" == "8" ]; then
 
     echo -e "Creating Template components"
 
-    for COMPONENT_PATH in $(ls elastic-index-templates/tpl_8x/component_templates/*jsonc); do
+    for COMPONENT_PATH in $(ls elastic-index-templates/tpl_8x/component_templates/*.jsonc); do
         COMPONENT_NAME=$(basename "$COMPONENT_PATH" .jsonc)
         echo -e "$COMPONENT_NAME ($COMPONENT_PATH): "
         cmd=$(curl $CURL_OPTIONS $CURL_CREDS -XPUT "$CURL_SCHEME://$IP_ELASTIC:9200/_component_template/$COMPONENT_NAME" -H "Content-Type: application/json" --data-binary @$COMPONENT_PATH)
         echo -e $cmd | jq
     done
+
+    echo -e "Creating Index templates"
 
     for TEMPLATE_PATH in $(ls elastic-index-templates/tpl_8x/*.jsonc); do
         TEMPLATE_NAME=$(basename "$TEMPLATE_PATH" .jsonc)
