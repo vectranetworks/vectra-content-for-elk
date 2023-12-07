@@ -11,9 +11,7 @@
   "template":{
     "settings": {
       "index": {
-        "number_of_shards": "2",
-        "lifecycle.name": "stream-ilm-policy",
-        "lifecycle.rollover_alias":"metadata_x509"
+        "number_of_shards": "2"
       }
     },
     "mappings": {
