@@ -3,7 +3,7 @@
   "version": 1,
   "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local","metadata_default_lifecyle_policy"],
   "index_patterns": [
-    "metadata_dnsrecordinfo*"
+    "metadata_dns*"
   ],
   "_meta": {
     "description": "Template for DNS metadata produced by Vectra Stream"
