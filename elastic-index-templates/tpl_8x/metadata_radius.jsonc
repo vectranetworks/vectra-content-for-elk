@@ -1,7 +1,7 @@
 {
-  "priority": 300,
+  "priority": 1,
   "version": 1,
-  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local","metadata_default_lifecyle_policy"],
+  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local"],
   "index_patterns": [
     "metadata_radius*"
   ],
@@ -10,6 +10,7 @@
   },
   "template":{
     "settings": {
+      "lifecycle.rollover_alias":"metadata_radius",
       "index": {
         "number_of_shards": "1"
       }

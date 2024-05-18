@@ -1,31 +1,38 @@
 {
   "policy": {
-    "phases": {
-      "hot": {
-        "min_age": "0ms",
-        "actions": {
-          "set_priority": {
-            "priority": 100
+    "_meta": {
+      "description": "Vectra Stream ILM Policy",
+      "project": {
+        "name": "Vectra",
+        "department": "Stream"
+      }
+    },
+    "phases" : {
+      "warm" : {
+        "min_age" : "2d",
+        "actions" : {
+          "set_priority" : {
+            "priority" : 50
+          }
+        }
+      },
+      "hot" : {
+        "min_age" : "0ms",
+        "actions" : {
+          "set_priority" : {
+            "priority" : 100
           },
-          "rollover": {
-            "max_age": "30d",
-            "max_primary_shard_size": "50gb"
+          "rollover" : {
+            "max_primary_shard_size" : "50gb",
+            "max_age" : "1d"
           }
         }
       },
-      "warm": {
-        "min_age": "3d",
-        "actions": {
-          "set_priority": {
-            "priority": 50
-          }
-        }
-      },
-      "delete": {
-        "min_age": "7d",
-        "actions": {
-          "delete": {
-            "delete_searchable_snapshot": true
+      "delete" : {
+        "min_age" : "7d",
+        "actions" : {
+          "delete" : {
+            "delete_searchable_snapshot" : true
           }
         }
       }

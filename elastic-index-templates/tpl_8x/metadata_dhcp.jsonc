@@ -1,20 +1,21 @@
 {
-  "priority": 300,
+  "priority": 1,
   "version": 1,
-  "composed_of": ["metadata","metadata_default_lifecyle_policy"],
+  "composed_of": ["metadata"],
   "index_patterns": [
     "metadata_dhcp*"
   ],
-  "_meta": {
-    "description": "Template for DHCP metadata produced by Vectra Stream"
-  },
   "template":{
     "settings": {
+      "lifecycle.rollover_alias":"metadata_dhcp",
       "index": {
         "number_of_shards": "2"
       }
     },
     "mappings": {
+      "_meta": {
+        "description": "Template for DHCP metadata produced by Vectra Stream"
+      },
       "properties": {
         "mac": {
           "type": "keyword"

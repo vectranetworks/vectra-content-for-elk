@@ -1,20 +1,21 @@
 {
-  "priority": 300,
+  "priority": 1,
   "version": 1,
-  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local","metadata_default_lifecyle_policy"],
+  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local"],
   "index_patterns": [
     "metadata_httpsessioninfo*"
   ],
-  "_meta": {
-    "description": "Template for HTTP metadata produced by Vectra Stream"
-  },
   "template":{
     "settings": {
+      "lifecycle.rollover_alias":"metadata_httpsessioninfo",
       "index": {
         "number_of_shards": "5"
       }
     },
     "mappings": {
+      "_meta": {
+        "description": "Template for HTTP metadata produced by Vectra Stream"
+      },
       "properties": {
         "method": {
           "type": "keyword"
