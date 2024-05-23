@@ -1,20 +1,21 @@
 {
   "priority": 300,
   "version": 1,
-  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local","metadata_default_lifecyle_policy"],
+  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local"],
   "index_patterns": [
     "metadata_kerberos_txn*"
   ],
-  "_meta": {
-    "description": "Template for Kerberos metadata produced by Vectra Stream"
-  },
   "template":{
     "settings": {
+      "lifecycle.rollover_alias":"metadata_kerberos_txn",
       "index": {
         "number_of_shards": "2"
       }
     },
     "mappings": {
+      "_meta": {
+        "description": "Template for Kerberos metadata produced by Vectra Stream"
+      },
       "properties": {
         "request_type": {
           "type": "keyword"
