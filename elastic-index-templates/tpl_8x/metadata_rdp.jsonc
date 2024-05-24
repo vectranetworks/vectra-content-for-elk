@@ -1,20 +1,21 @@
 {
   "priority": 300,
   "version": 1,
-  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local","metadata_default_lifecyle_policy"],
+  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local"],
   "index_patterns": [
     "metadata_rdp*"
   ],
-  "_meta": {
-    "description": "Template for RDP metadata produced by Vectra Stream"
-  },
   "template":{
     "settings": {
+      "lifecycle.rollover_alias":"metadata_rdp",
       "index": {
         "number_of_shards": "1"
       }
     },
     "mappings": {
+      "_meta": {
+        "description": "Template for RDP metadata produced by Vectra Stream"
+      },
       "properties": {
         "cookie": {
           "type": "keyword"
