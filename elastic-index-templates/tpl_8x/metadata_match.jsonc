@@ -1,7 +1,7 @@
 {
   "priority": 300,
   "version": 1,
-  "composed_of": ["metadata_id", "metadata_host", "metadata_local"],
+  "composed_of": ["metadata", "metadata_id", "metadata_host", "metadata_local"],
   "index_patterns": ["metadata_match*"],
   "template":{
     "settings": {
