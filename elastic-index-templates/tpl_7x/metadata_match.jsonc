@@ -1,0 +1,164 @@
+{
+  "order": 1,
+  "version": 1,
+  "index_patterns": [
+    "metadata_match*"
+  ],
+  "mappings": {
+    "default": {
+      "properties": {
+        "uid": {
+          "type": "keyword"
+        },
+        "id": {
+          "properties": {
+            "orig_h": {
+              "type": "ip"
+            },
+            "orig_p": {
+              "type": "integer"
+            },
+            "resp_h": {
+              "type": "ip"
+            },
+            "resp_p": {
+              "type": "integer"
+            },
+            "ip_ver": {
+              "type": "keyword"
+            }
+          }
+        },
+        "orig_hostname": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "resp_hostname": {
+          "type": "keyword",
+          "eager_global_ordinals": true
+        },
+        "orig_huid": {
+          "type": "keyword"
+        },
+        "resp_huid": {
+          "type": "keyword"
+        },
+        "local_orig": {
+          "type": "boolean"
+        },
+        "local_resp": {
+          "type": "boolean"
+        },
+        "eve_json": {
+          "properties": {
+            "timestamp": {
+              "type": "date",
+              "format": "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
+            },
+            "flow_id": {"type": "keyword"},
+            "event_type": {"type": "keyword"},
+            "proto": {"type": "keyword"},
+            "src_ip": {"type": "ip"},
+            "src_port": {"type": "integer"},
+            "dest_ip": {"type": "ip"},
+            "dest_port": {"type": "integer"},
+            "pkt_src": {"type": "keyword"},
+            "tx_id": {"type": "integer"},
+            "app_proto": {"type": "keyword"},
+            "direction": {"type": "keyword"},
+            "payload": {"type": "text"},
+            "payload_printable": {"type": "text"},
+            "stream": {"type": "integer"},
+            "packet": {"type": "text"},
+            "packet_info": {
+              "properties": {
+                "linktype": {"type": "integer"}
+              }
+            },
+            "alert": {
+              "properties": {
+                "action": {
+                  "type": "keyword"
+                },
+                "category": {
+                  "type": "keyword"
+                },
+                "gid": {
+                  "type": "integer"
+                },
+                "rev": {
+                  "type": "integer"
+                },
+                "rule": {
+                  "type": "keyword"
+                },
+                "severity": {
+                  "type": "integer"
+                },
+                "signature": {
+                  "type": "keyword"
+                },
+                "signature_id": {
+                  "type": "integer"
+                },
+                "xff": {
+                  "type": "keyword"
+                },
+                "metadata": {
+                  "properties": {
+                    "affected_product": {
+                      "type": "keyword"
+                    },
+                    "attack_target": {
+                      "type": "keyword"
+                    },
+                    "created_at": {
+                      "type": "date",
+                      "format": "yyyy_MM_dd"
+                    },
+                    "deployment": {
+                      "type": "keyword"
+                    },
+                    "former_category": {
+                      "type": "keyword"
+                    },
+                    "malware_family": {
+                      "type": "keyword"
+                    },
+                    "policy": {
+                      "type": "keyword"
+                    },
+                    "signature_severity": {
+                      "type": "keyword"
+                    },
+                    "tag": {
+                      "type": "keyword"
+                    },
+                    "updated_at": {
+                      "type": "date",
+                      "format": "yyyy_MM_dd"
+                    }
+                  }
+                },
+                "source": {
+                  "properties": {
+                    "ip": {
+                      "type": "ip"
+                    }
+                  }
+                },
+                "target": {
+                  "properties": {
+                    "ip": {
+                      "type": "ip"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
